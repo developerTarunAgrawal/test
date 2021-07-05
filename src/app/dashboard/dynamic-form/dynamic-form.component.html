@@ -1,0 +1,45 @@
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12" *ngFor="let bank of banks.controls;index as i">
+            <div class="card mb-3 shadow p-3 mb-5 bg-white rounded">
+                <form [formGroup]="bank">
+                    <div class="card-body">
+                        <h4 class="card-title text-uppercase">{{getName(i)}}</h4>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Min Slab</label><br>
+                                    <input type="number" formControlName="minSlab" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Max Slab</label><br>
+                                    <input type="number" formControlName="maxSlab" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Amount</label><br>
+                                    <input type="number" formControlName="amount" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Fixed</label><br>
+                                    <input type="number" formControlName="fixed" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <button class="btn btn-sm btn-primary" (click)="save()">Submit</button>
+        </div>
+        <br><br>
+    </div>
+</div>
